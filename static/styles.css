@@ -1,0 +1,30 @@
+h1 {
+    color: red;
+}
+
+.heading {
+    font-weight: bold;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col1  {
+    text-align: center;
+}
+.col2  {
+    text-align: center;
+}
+.col5  {
+    text-align: center;
+}
+.col6  {
+    text-align: center;
+}
+.col7  {
+    text-align: center;
+}
+
+

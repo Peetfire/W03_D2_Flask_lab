@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}: </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css') }}">
+    <title>{{title}} {{order_id}}</title>
 </head>
 <body>
     <h1>Order details:</h1>
-    <div>
-        <p>{{order.order_no}}: {{order.order_date}} - {{order.customer_name}} - {{order.description}} - {{order.quantity}} - £{{order.price}}</p>
+
+    <div id="container">
+        
+        <div class="row">
+            <div class="heading col1">{{headings[0]}}</div>
+            <div class="heading col2">{{headings[1]}}</div>
+            <div class="heading col3">{{headings[2]}}</div>
+            <div class="heading col4">{{headings[3]}}</div>
+            <div class="heading col5">{{headings[4]}}</div>
+            <div class="heading col6">{{headings[5]}}</div>
+            <div class="heading col7">{{headings[6]}}</div>
+        </div>
+
+        <div class="row">
+            <div class="col1">{{order.order_no}}</div>
+            <div class="col2">{{order.order_date}}</div>
+            <div class="col3">{{order.customer_name}}</div>
+            <div class="col4">{{order.description}}</div>
+            <div class="col5">{{"£%.2f"|format(order.price)}}</div>
+            <div class="col6">{{order.quantity}}</div>
+            <div class="col7">{{"£%.2f"|format(order.price * order.quantity)}}</div>
+        </div>
+        
     </div>
+
 </body>
 </html>
