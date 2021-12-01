@@ -11,9 +11,10 @@
     <p>Current list of all orders: </p>
 
     {% for order in orders %}
+    
     <div>
         <p>
-            {{order.order_date}} - {{order.customer_name}} - {{order.description}} - {{order.quantity}} - £{{order.price}}
+            <a href="../orders/{{order.order_no}}">{{order.order_no}}: {{order.order_date}} - {{order.customer_name}} - {{order.description}} - {{order.quantity}} - £{{order.price}}</a>
         </p>
     </div>
     {% endfor %}
